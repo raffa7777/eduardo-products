@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kipgroothandel Amsterdam | Horeca Leverancier | Eduardo Products</title>
+
+<meta name="description" content="Eduardo Products is dé kipgroothandel voor horeca in Amsterdam, Utrecht, Zwolle, Kampen en Hilversum. Bestel kipfilet, kippendijen en meer. Minimale afname 20 kg.">
+
+<meta name="keywords" content="kipgroothandel Amsterdam, horeca kip leverancier, kipfilet groothandel Utrecht, kip groothandel Zwolle, kip leverancier horeca Nederland">
+
+<meta name="author" content="Eduardo Products">
+
+<link rel="icon" type="image/png" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background: #c40000;
+    color: white;
+    padding: 15px 30px;
+    margin-top: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    padding: 25px;
+    border-left: 6px solid #c40000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.price {
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.region {
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+form {
+    background: white;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #c40000;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.notice {
+    text-align:center;
+    font-weight:600;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="logo.png" alt="Eduardo Products Logo">
+<h1>Eduardo Products</h1>
+<p>Kipgroothandel voor horeca in Amsterdam, Utrecht, Zwolle, Kampen en Hilversum</p>
+<a href="#bestellen" class="btn">Plaats Bestelling</a>
+</header>
+
+<section>
+<h2>Horeca Kip Leverancier</h2>
+<p>
+Eduardo Products is gespecialiseerd in de levering van hoogwaardige kipproducten aan restaurants, cafés en cateringbedrijven. 
+Wij zijn actief als kipgroothandel in Amsterdam, Utrecht, Zwolle, Kampen en Hilversum. 
+Met scherpe prijzen en betrouwbare levering ondersteunen wij horecaondernemers dagelijks.
+</p>
+</section>
+
+<section class="region">
+<h2>Leveringsgebied</h2>
+<p>Amsterdam • Utrecht • Zwolle • Kampen • Hilversum</p>
+<p><strong>Minimale afname: 20 kg per bestelling</strong></p>
+</section>
+
+<section>
+<h2>Ons Assortiment</h2>
+
+<div class="products">
+
+<div class="product">
+<h3>Kipfilet Groothandel</h3>
+<div class="price">€6,50 per kg</div>
+</div>
+
+<div class="product">
+<h3>Kippendijen Horeca</h3>
+<div class="price">€5,20 per kg</div>
+</div>
+
+<div class="product">
+<h3>Drumsticks Leverancier</h3>
+<div class="price">€4,80 per kg</div>
+</div>
+
+<div class="product">
+<h3>Kipvleugels Groothandel</h3>
+<div class="price">€4,50 per kg</div>
+</div>
+
+<div class="product">
+<h3>Hele Kip voor Horeca</h3>
+<div class="price">€5,00 per kg</div>
+</div>
+
+</div>
+
+<p class="notice">Voor grotere volumes kunt u een offerte aanvragen via info@eduardoproducts.nl</p>
+
+</section>
+
+<section id="bestellen">
+<h2>Plaats uw bestelling</h2>
+
+<form action="https://formspree.io/f/YOURCODE" method="POST">
+
+<input type="text" name="bedrijfsnaam" placeholder="Bedrijfsnaam" required>
+<input type="text" name="kvk" placeholder="KvK-nummer" required>
+<input type="text" name="contactpersoon" placeholder="Contactpersoon" required>
+<input type="text" name="telefoon" placeholder="Telefoonnummer" required>
+<input type="email" name="email" placeholder="E-mailadres" required>
+
+<textarea name="bestelling" rows="5" placeholder="Vermeld product(en) en aantal kg (minimaal 20 kg totaal)" required></textarea>
+
+<input type="date" name="leverdatum" required>
+
+<input type="hidden" name="_subject" value="Nieuwe bestelling - Eduardo Products">
+
+<button type="submit">Bestelling Verzenden</button>
+
+</form>
+
+<p class="notice">Wij nemen binnen 24 uur contact met u op ter bevestiging.</p>
+
+</section>
+
+<footer>
+<p><strong>Eduardo Products</strong></p>
+<p>Kipgroothandel Nederland | Horeca Leverancier</p>
+<p>Email: info@eduardoproducts.nl</p>
+<p>Ingeschreven bij KvK</p>
+</footer>
+
+</body>
+</html>
