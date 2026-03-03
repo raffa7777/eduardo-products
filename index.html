@@ -132,28 +132,45 @@ footer {
     margin-top:20px;
 }
 
-/* HALAL KEURMERK BADGE */
+/* LUXE HALAL KEURMERK */
 
 .halal-section {
     text-align: center;
 }
 
 .halal-logo {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    background-color: #0a7d2c;
+    background: radial-gradient(circle, #0f8a32 60%, #0a6d28 100%);
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 30px auto;
     font-weight: 700;
     text-align: center;
-    font-size: 16px;
-    line-height: 1.4;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    border: 4px solid white;
+    font-size: 18px;
+    line-height: 1.5;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    border: 6px solid #d4af37; /* goudkleurige rand */
+}
+
+.halal-logo:before {
+    content: "★ ★ ★";
+    position: absolute;
+    top: 15px;
+    font-size: 14px;
+    letter-spacing: 5px;
+}
+
+.halal-logo:after {
+    content: "CERTIFIED QUALITY";
+    position: absolute;
+    bottom: 15px;
+    font-size: 11px;
+    letter-spacing: 1px;
 }
 </style>
 </head>
@@ -369,6 +386,7 @@ Certificering is op aanvraag beschikbaar.
 </body>
 
 </html>
+
 
 
 
