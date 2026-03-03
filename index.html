@@ -132,6 +132,32 @@ footer {
     font-weight:600;
     margin-top:20px;
 }
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #1ebe5d;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
 </style>
 </head>
 
@@ -391,9 +417,16 @@ Op aanvraag is levering mogelijk.</p>
 <p>Ingeschreven bij KvK</p>
 </footer>
 
+<a href="https://wa.me/31625234530?text=Hallo,%20ik%20wil%20graag%20meer%20informatie%20over%20jullie%20kipproducten."
+   class="whatsapp-float"
+   target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
 </body>
 
 </html>
+
 
 
 
