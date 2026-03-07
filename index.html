@@ -19,7 +19,7 @@
 
 <style>
 
-html {
+html, body {
 scroll-behavior: smooth;
 scroll-padding-top: 90px;
 }
@@ -271,18 +271,6 @@ section {
 }
 </style>
 </head>
-
-<script>
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-anchor.addEventListener('click', function (e) {
-e.preventDefault();
-
-document.querySelector(this.getAttribute('href')).scrollIntoView({
-behavior: 'smooth'
-});
-});
-});
-</script>
 
 <body>
 
@@ -589,6 +577,7 @@ Neem contact op voor een actuele prijsopgave.
 </body>
 
 </html>
+
 
 
 
