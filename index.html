@@ -36,6 +36,28 @@
     text-decoration:none;
 }
 
+.topmenu {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    z-index: 1000;
+}
+
+.topmenu a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.topmenu a:hover {
+    color: #c40000;
+}
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -212,6 +234,13 @@ footer {
 
 <body>
 
+<nav class="topmenu">
+    <a href="#assortiment">Ons assortiment</a>
+    <a href="#bestelproces">Bestelproces</a>
+    <a href="#offerte">Vraag prijs / offerte</a>
+    <a href="#contact">Contact</a>
+</nav>
+
 <header>
 <img src="logo.png" alt="Eduardo Products Logo">
 <h1>Eduardo Products</h1>
@@ -284,7 +313,7 @@ Certificering is op aanvraag beschikbaar.
 </div>
 </section>
 
-<section>
+<section id="assortiment">
 <h2>Ons Assortiment</h2>
 
 <p style="text-align:center; font-weight:600; margin-bottom:30px;">
@@ -433,7 +462,7 @@ info@eduardoproducts.nl
 <p>Wij reageren binnen 24 uur.</p>
 </section>
 
-<section style="background:#111; color:white; text-align:center;">
+<section id="bestelproces" style="background:#111; color:white; text-align:center;">
 <h2>Levering & Bestelproces</h2>
 
 <p>1. Vraag een offerte aan via het formulier of WhatsApp</p>
@@ -461,7 +490,7 @@ Op aanvraag is levering mogelijk.</p>
 
 </section>
 
-<section id="bestellen">
+<section id="offerte">
 <h2>Vraag een prijs of offerte aan</h2>
 
 <p style="text-align:center; max-width:700px; margin:auto; margin-bottom:30px;">
@@ -492,7 +521,7 @@ Neem contact op voor een actuele prijsopgave.
 
 </section>
 
-<footer>
+<footer id="contact">
 <p><strong>Eduardo Products</strong></p>
 <p>Vleesleverancier Nederland | Horeca Leverancier</p>
 <p>Email: info@eduardoproducts.nl</p>
@@ -508,6 +537,7 @@ Neem contact op voor een actuele prijsopgave.
 </body>
 
 </html>
+
 
 
 
