@@ -191,6 +191,42 @@ h2 {
     gap: 20px;
 }
 
+.filter-buttons{
+text-align:center;
+margin-bottom:30px;
+}
+
+.filter-buttons button{
+background:#c40000;
+color:white;
+border:none;
+padding:10px 18px;
+margin:5px;
+border-radius:25px;
+cursor:pointer;
+font-weight:600;
+transition:0.2s;
+}
+
+.filter-buttons button:hover{
+background:#e00000;
+transform:translateY(-2px);
+}
+
+.search-bar{
+text-align:center;
+margin-bottom:25px;
+}
+
+.search-bar input{
+padding:12px;
+width:320px;
+max-width:90%;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:15px;
+}
+
 .product {
     background: white;
     padding: 25px;
@@ -423,6 +459,18 @@ Certificering is op aanvraag beschikbaar.
 <section id="assortiment">
 <h2>Ons Assortiment</h2>
 
+<div class="search-bar">
+<input type="text" id="searchInput" placeholder="Zoek een product...">
+</div>
+
+<div class="filter-buttons">
+<button onclick="filterCategory('all')">Alles</button>
+<button onclick="filterCategory('kip')">Kip</button>
+<button onclick="filterCategory('rund')">Rund</button>
+<button onclick="filterCategory('lam')">Lam</button>
+<button onclick="filterCategory('overige')">Overige</button>
+</div>
+
 <p style="text-align:center; font-weight:600; margin-bottom:30px;">
 Prijzen zijn afhankelijk van volume en dagmarkt.  
 Vraag vrijblijvend een offerte aan voor actuele prijzen.
@@ -430,115 +478,206 @@ Vraag vrijblijvend een offerte aan voor actuele prijzen.
 
 <div class="products">
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipfilet.jpg" alt="Verse kipfilet A kwaliteit">
 <h3>Verse Kipfilet A kwaliteit</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipfiletvel.jpg" alt="Verse kipfilet met vel">
 <h3>Verse Kipfilet met vel</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipfiletblokjes.jpg" alt="Kipfilet blokjes">
 <h3>Kipfilet blokjes (klein/groot)</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="dijenvlees.jpg" alt="Verse dijenvlees">
 <h3>Verse Dijenvlees</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="dijenvleesblokjes.jpg" alt="Dijenvlees blokjes">
 <h3>Dijenvlees blokjes (groot/klein)</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipboutvel.jpg" alt="Kipbout met vel zonder bot">
 <h3>Kipbout met vel zonder bot</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipbouten.jpg" alt="Kip bouten">
 <h3>Kip bouten</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="helekip.jpg" alt="Hele kip">
 <h3>Hele kip (1100-1400 gr.)</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipsatefilet.jpg" alt="Kipfilet saté stokje gekruid">
 <h3>Kipfilet saté stokjes gekruid</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipdijensate.jpg" alt="Kipdijen saté stokjes gekruid">
 <h3>Kipdijen saté stokjes gekruid</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipvleugels.jpg" alt="Kip vleugels">
 <h3>Kip vleugels</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="drumstick.jpg" alt="Drumstick">
 <h3>Drumstick</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="kipnuggets.jpg" alt="Kipnuggets">
 <h3>Kipnuggets (5 kilo doos)</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="hotwings.jpg" alt="Hotwings">
 <h3>Hotwings kant en klaar (5 kilo doos)</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="kip">
 <img src="chickenstrips.jpg" alt="Chickenstrips">
 <h3>Chickenstrips pikante (5 kilo doos)</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
-<div class="product">
+<div class="product" data-category="rund">
 <img src="hamburger.jpg" alt="Hamburger">
 <h3>Hamburger (113g / 170g per stuk)</h3>
 <p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="rund">
+<img src="rundvlees.jpg" alt="Rundvlees nekstuk">
+<h3>Rundvlees Nekstuk</h3>
+<p>Vers rundvlees • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="rund">
+<img src="ossenhaas.jpg" alt="Ossenhaas Brazil">
+<h3>Ossenhaas (Brazilië/Nieuw Zeeland/Uruguay)</h3>
+<p>Vers rundvlees • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="rund">
+<img src="jodenhaas.jpg" alt="Jodenhaas Nederland">
+<h3>Jodenhaas (Nederland/Europees)</h3>
+<p>Vers rundvlees • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="rund">
+<img src="ribeye.jpg" alt="Ribeye Brazil">
+<h3>Ribeye (Brazilië)</h3>
+<p>Vers rundvlees • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="rund">
+<img src="entrecote.jpg" alt="Entrecote Brazil">
+<h3>Entrecote (Brazilië)</h3>
+<p>Vers vlees • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="overige">
+<img src="spareribs.jpg" alt="Spareribs kant en klaar">
+<h3>Spareribs Kant en Klaar</h3>
+<p>Direct klaar voor bereiding • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="overige">
+<img src="sparerib.jpg" alt="Spareribs diepvries">
+<h3>Spareribs (Diepvries)</h3>
+<p>Diepgevroren spareribs • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="rund">
+<img src="kophaas.jpg" alt="Kophaas vers">
+<h3>Kophaas (Vers)</h3>
+<p>Vers rundvlees • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="lam">
+<img src="lamsracks.jpg" alt="Lamsracks diepvries">
+<h3>Lamsracks (Diepvries)</h3>
+<p>Diepgevroren • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="lam">
+<img src="frenchrack.jpg" alt="French Rack New Zealand">
+<h3>French Rack (Nieuw Zeeland)</h3>
+<p>Halal gecertificeerd • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="overige">
+<img src="varkennnek.jpg" alt="Varkensnek zonder bot">
+<h3>Varkensnek (Vers)</h3>
+<p>Vers varkensvlees • Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="overige">
+<img src="buikspek.jpg" alt="Buikspek zonder bot">
+<h3>Buikspek (Vers)</h3>
+<p>Vers varkensvlees •Geschikt voor horeca en catering</p>
+<a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
+</div>
+
+<div class="product" data-category="overige">
+<img src="eieren.jpg" alt="Doos eieren 360">
+<h3>Eieren (Doos 360/300 Stuks L)</h3>
+<p>Grootverpakking eieren • Geschikt voor horeca en catering</p>
 <a href="#offerte" class="btn" style="padding:10px 20px; font-size:14px;">Offerte aanvragen</a>
 </div>
 
@@ -676,9 +815,56 @@ Levering in Amsterdam • Utrecht • Zwolle • Kampen • Hilversum
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
+<script>
+
+const searchInput = document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup", function(){
+
+let filter = searchInput.value.toLowerCase();
+let products = document.querySelectorAll(".product");
+
+products.forEach(function(product){
+
+let text = product.innerText.toLowerCase();
+
+if(text.includes(filter)){
+product.style.display="flex";
+}else{
+product.style.display="none";
+}
+
+});
+
+});
+
+function filterCategory(category){
+
+let products = document.querySelectorAll(".product");
+
+products.forEach(function(product){
+
+if(category === "all"){
+product.style.display="flex";
+return;
+}
+
+if(product.dataset.category === category){
+product.style.display="flex";
+}else{
+product.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
 </body>
 
 </html>
+
 
 
 
